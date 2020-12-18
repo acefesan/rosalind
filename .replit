@@ -1,2 +1,3 @@
 language = "python3"
-run = "python stronghold/MRNA/MRNA.py"
+run = "python stronghold/GRPH/GRPH.py"
+

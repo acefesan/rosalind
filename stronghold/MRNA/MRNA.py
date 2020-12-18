@@ -25,7 +25,8 @@ dataset = open("stronghold/MRNA/rosalind_mrna.txt","r")
 
 prot = dataset.read().strip()
 print(prot)
-a = [D[x] for x in prot]
-numCombinations = functools.reduce(lambda x,y: (x*y)%1000000, a) * 3 # *3 for stop codon
+pepe = list(prot)
+pepe[0] = D[pepe[0]]
+numCombinations = functools.reduce(lambda x,y: (x*D[y])%1000000, pepe) * 3 # *3 for stop codon
 
 print(numCombinations)
